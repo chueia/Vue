@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <style>
+    .red{color:red}
+    #bg-yellow{
+        background: yellow;
+    }
+    </style>
+</head>
+<body>
+    <div class="app">
+        
+        <h1 v-bind:class="change" :id="'bg-yellow'">{{title}}</h1>
+        <p v-once>{{title}}</p>
+        <input type="text" v-model="title">
+    </div>
+
+
+    <script>
+    var app = new Vue({
+        el:'.app',
+        data:{
+            title:'傻狗阿淮',
+            change:'red'
+        }
+    })
+    </script>
+</body>
+</html>
