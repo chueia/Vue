@@ -18,6 +18,8 @@
         
         <h1 v-bind:class="change" :id="'bg-yellow'">{{title}}</h1>
         <p v-once>{{title}}</p>
+        <p v-text="title"></p>
+        <p v-html="html"></p>
         <input type="text" v-model="title">
     </div>
 
@@ -27,7 +29,9 @@
         el:'.app',
         data:{
             title:'傻狗阿淮',
-            change:'red'
+            change:'red',
+            html:'<h3>这是h3</h3>'
+            
         }
     })
     </script>
